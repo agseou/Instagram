@@ -19,6 +19,13 @@
 		A047D2572B74C58E00F897E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D2562B74C58E00F897E4 /* BaseViewController.swift */; };
 		A047D25A2B74CB8400F897E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D2592B74CB8400F897E4 /* ProfileViewController.swift */; };
 		A047D25D2B74D09200F897E4 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D25C2B74D09100F897E4 /* StandardButton.swift */; };
+		A047D25F2B76767300F897E4 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D25E2B76767300F897E4 /* ProfileImage.swift */; };
+		A047D2632B768C8800F897E4 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D2622B768C8800F897E4 /* ProfileEditViewController.swift */; };
+		A047D2652B768D3C00F897E4 /* ProfileEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D2642B768D3C00F897E4 /* ProfileEditTableViewCell.swift */; };
+		A047D2672B768D4400F897E4 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D2662B768D4400F897E4 /* BaseTableViewCell.swift */; };
+		A047D2692B77974B00F897E4 /* DetailProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D2682B77974B00F897E4 /* DetailProfileEditViewController.swift */; };
+		A047D26E2B78FFF400F897E4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D26D2B78FFF400F897E4 /* UserDefaultsManager.swift */; };
+		A047D2702B7908D200F897E4 /* ProfileSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A047D26F2B7908D200F897E4 /* ProfileSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		A047D2562B74C58E00F897E4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A047D2592B74CB8400F897E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A047D25C2B74D09100F897E4 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
+		A047D25E2B76767300F897E4 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		A047D2622B768C8800F897E4 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		A047D2642B768D3C00F897E4 /* ProfileEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditTableViewCell.swift; sourceTree = "<group>"; };
+		A047D2662B768D4400F897E4 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		A047D2682B77974B00F897E4 /* DetailProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileEditViewController.swift; sourceTree = "<group>"; };
+		A047D26D2B78FFF400F897E4 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		A047D26F2B7908D200F897E4 /* ProfileSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,8 @@
 				A047D2582B74CB6400F897E4 /* Profile */,
 				A047D24E2B74C48B00F897E4 /* Resources */,
 				A047D24C2B74C44C00F897E4 /* Supporting */,
+				A047D26D2B78FFF400F897E4 /* UserDefaultsManager.swift */,
+				A047D26F2B7908D200F897E4 /* ProfileSetting.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -124,6 +140,7 @@
 		A047D2552B74C58700F897E4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A047D2662B768D4400F897E4 /* BaseTableViewCell.swift */,
 				A047D2402B74C31500F897E4 /* LaunchScreen.storyboard */,
 				A047D2392B74C31200F897E4 /* ViewController.swift */,
 				A047D23B2B74C31200F897E4 /* Main.storyboard */,
@@ -136,6 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				A047D2592B74CB8400F897E4 /* ProfileViewController.swift */,
+				A047D2622B768C8800F897E4 /* ProfileEditViewController.swift */,
+				A047D2642B768D3C00F897E4 /* ProfileEditTableViewCell.swift */,
+				A047D2682B77974B00F897E4 /* DetailProfileEditViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -144,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A047D25C2B74D09100F897E4 /* StandardButton.swift */,
+				A047D25E2B76767300F897E4 /* ProfileImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,12 +246,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A047D2652B768D3C00F897E4 /* ProfileEditTableViewCell.swift in Sources */,
 				A047D2522B74C57600F897E4 /* SearchViewController.swift in Sources */,
 				A047D23A2B74C31200F897E4 /* ViewController.swift in Sources */,
+				A047D2692B77974B00F897E4 /* DetailProfileEditViewController.swift in Sources */,
 				A047D2362B74C31200F897E4 /* AppDelegate.swift in Sources */,
+				A047D2672B768D4400F897E4 /* BaseTableViewCell.swift in Sources */,
 				A047D2382B74C31200F897E4 /* SceneDelegate.swift in Sources */,
+				A047D25F2B76767300F897E4 /* ProfileImage.swift in Sources */,
 				A047D25D2B74D09200F897E4 /* StandardButton.swift in Sources */,
+				A047D2632B768C8800F897E4 /* ProfileEditViewController.swift in Sources */,
+				A047D26E2B78FFF400F897E4 /* UserDefaultsManager.swift in Sources */,
 				A047D25A2B74CB8400F897E4 /* ProfileViewController.swift in Sources */,
+				A047D2702B7908D200F897E4 /* ProfileSetting.swift in Sources */,
 				A047D2502B74C55900F897E4 /* HomeViewController.swift in Sources */,
 				A047D2572B74C58E00F897E4 /* BaseViewController.swift in Sources */,
 			);
