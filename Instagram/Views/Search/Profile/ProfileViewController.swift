@@ -14,8 +14,9 @@ class ProfileViewController: BaseViewController {
     let stackView = UIStackView()
     let profileImage = ProfileImage(frame: .zero)
     let nameLabel = UILabel()
-    let editProfileButton = StandardButton()
-    let shareProfileButton = StandardButton()
+    let ButtonStackView = UIStackView()
+    let editProfileButton = StandardSettingButton()
+    let shareProfileButton = StandardSettingButton()
     
     let profileInfo: [String:Int] = ["게시물": 20, "팔로워": 190, "팔로잉": 223]
     
@@ -35,13 +36,15 @@ class ProfileViewController: BaseViewController {
         contentView.addSubview(stackView)
         contentView.addSubview(profileImage)
         contentView.addSubview(nameLabel)
-        contentView.addSubview(editProfileButton)
-        contentView.addSubview(shareProfileButton)
+        contentView.addSubview(ButtonStackView)
         
         for (label, number) in profileInfo {
             let subStackView = createSubStackView(number: number, label: label)
             stackView.addArrangedSubview(subStackView)
         }
+        
+        ButtonStackView.addArrangedSubview(editProfileButton)
+        ButtonStackView.addArrangedSubview(shareProfileButton)
     }
     
     override func configureView() {
@@ -52,6 +55,11 @@ class ProfileViewController: BaseViewController {
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
         stackView.spacing = 10
+        
+        ButtonStackView.axis = .horizontal
+        ButtonStackView.alignment = .fill
+        ButtonStackView.distribution = .fillEqually
+        ButtonStackView.spacing = 10
         
         nameLabel.text = "서우"
         
@@ -81,15 +89,10 @@ class ProfileViewController: BaseViewController {
             $0.top.equalTo(profileImage.snp.bottom)
             $0.leading.equalTo(profileImage)
         }
-        editProfileButton.snp.makeConstraints {
+        ButtonStackView.snp.makeConstraints {
+            $0.horizontalEdges.equalTo(contentView).inset(20)
             $0.top.equalTo(nameLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(contentView).offset(30)
         }
-        shareProfileButton.snp.makeConstraints {
-            $0.top.equalTo(nameLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(editProfileButton.snp.trailing).offset(8)
-        }
-        
     }
     
     private func createSubStackView(number: Int, label: String) -> UIStackView {

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class StandardButton: UIButton {
-
+class StandardSettingButton: UIButton {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -20,12 +20,10 @@ class StandardButton: UIButton {
     }
     
     private func configureView() {
-        var config = UIButton.Configuration.plain()
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .systemGray3
         config.baseForegroundColor = .label
-        config.contentInsets.leading = 4
-        config.contentInsets.trailing = 4
         self.configuration = config
     }
     
-
 }

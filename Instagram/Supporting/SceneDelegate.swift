@@ -29,12 +29,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let searchNavigationController = UINavigationController(rootViewController: searchViewController)
         
         // 내 프로필 뷰 컨트롤러 생성 및 네비게이션 컨트롤러 연결
+        let postingViewController = PostingViewController()
+        postingViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "plus.app"), selectedImage: UIImage(systemName: "plus.app"))
+        let postingNavigationController = UINavigationController(rootViewController: postingViewController)
+        
+        // 내 프로필 뷰 컨트롤러 생성 및 네비게이션 컨트롤러 연결
         let profileViewController = ProfileViewController()
-        profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "circle"), selectedImage: UIImage(systemName: "circle.fill"))
+        let image = ProfileImage(frame: .zero).image?.resizedImage(newWidth: 40).roundedImage.withRenderingMode(.alwaysOriginal)
+        profileViewController.tabBarItem.image = image
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
         
         // 탭 바 컨트롤러에 뷰 컨트롤러 추가
-        tabBarController.viewControllers = [homeNavigationController, searchNavigationController, profileNavigationController]
+        tabBarController.viewControllers = [homeNavigationController, 
+                                            searchNavigationController,
+                                            postingNavigationController,
+                                            profileNavigationController]
         
         window = UIWindow(windowScene: scene)
                
